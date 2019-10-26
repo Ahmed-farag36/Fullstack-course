@@ -1,0 +1,13 @@
+title Posting note (SPA way)
+
+note over browser:
+User submit the form
+end note
+
+browser->server: HTTP POST "https://fullstack-exampleapp.herokuapp.com/new_note_spa" with request payload as json
+server-->browser: HTTP Response (201) created
+
+note over browser:
+browser executes the event handler
+that redraw notes to display
+end note
