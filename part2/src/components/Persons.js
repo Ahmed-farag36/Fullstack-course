@@ -1,18 +1,20 @@
 import React from "react";
 
-export default ({ searchResult, persons }) => {
+export default ({ searchResult, persons, handleDelete }) => {
   let results;
 
   if (searchResult.length) {
-    results = searchResult.map(({ name, phoneNumber }) => (
+    results = searchResult.map(({ id, name, phoneNumber }) => (
       <li key={name}>
         {name} {phoneNumber}
+        <button onClick={() => handleDelete(id, name)}>delete</button>
       </li>
     ));
   } else {
-    results = persons.map(({ name, phoneNumber }) => (
+    results = persons.map(({ id, name, phoneNumber }) => (
       <li key={name}>
         {name} {phoneNumber}
+        <button onClick={() => handleDelete(id, name)}>delete</button>
       </li>
     ));
   }

@@ -1,0 +1,12 @@
+#modal {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  color: white;
+  width: 100vw;
+}
+
+#modal p {
+  text-align: center;
+  font-size: 120%;
+}
